@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Script Lab 替代測試</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://appsforoffice.microsoft.com/lib/1/hosted/office.js"></script>
+    <script src="./script.js"></script>
+</head>
+
+<body>
+    <section class="ms-font-m">
+        <p>This sample shows how to use the Excel API <code>onChange</code> event and the OBS WebSocket js API to
+            display an
+            Excel cell's value in OBS.</p>
+    </section>
+
+    <section class="setup ms-font-m">
+        <h3>OBS WebSocket Server Settings</h3>
+        <span class="ms-Button-label">Enter WebSocket Server IP Address</span>
+        <Input id="IP" class="ms-Button" value="localhost"></Input>
+        <span class="ms-Button-label">Enter WebSocket Server Port</span><br>
+        <Input id="Port" class="ms-Button" value="4455"></Input>
+        <span class="ms-Button-label">Enter WebSocket Server Password</span><br>
+        <Input type="password" id="PW" class="ms-Button"></Input>
+        <h3>OBS WebSocket Server Settings</h3>
+
+        <button id="register-event-handlers" class="ms-Button">
+            <span class="ms-Button-label">Connect to OBS WebSocket Server</span>
+        </button>
+        <p>The <code>onChange</code> events being listened for are:</p>
+        <ul>
+            <li><code>Table</code></li>
+        </ul>
+    </section>
+
+    <section class="samples ms-font-m">
+        <h3>Try it out</h3>
+    </section>
+
+    <section class="samples ms-font-m">
+        <p>The console will log the values reported by the different <code>onSelectionChanged</code> events. Change the
+            cell in the worksheet to see the results.</p>
+    </section>
+</body>
+
+</html>
